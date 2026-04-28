@@ -48,7 +48,7 @@ export function usePokemon(page: number, search: string, selectedType: string) {
 
 
 
-  //Paginate
+  //Paginate through it
   const filteredList=useMemo(() => {
     let list = allPokemon;
 
@@ -80,6 +80,8 @@ export function usePokemon(page: number, search: string, selectedType: string) {
       return;
     }
 
+
+// Details 
     const fetchDetails = async () => {
       setIsLoading(true);
       try {
